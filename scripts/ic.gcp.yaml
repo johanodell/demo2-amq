@@ -34,7 +34,7 @@ spec:
       - name: amq-interconnect
         env:
         - name: AMQ_LOCATION_KEY
-          value: JOHAN
+          value: ${GCP_SUFFIX}
       #  - name: ONPREM_SUFFIX
       #    value: ${ONPREM_SUFFIX}
         - name: AWS_SUFFIX
