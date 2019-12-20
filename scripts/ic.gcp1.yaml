@@ -34,9 +34,9 @@ spec:
       - name: amq-interconnect
         env:
         - name: AMQ_LOCATION_KEY
-          value: BURR
-        - name: ONPREM_SUFFIX
-          value: ${ONPREM_SUFFIX}
+          value: JOHAN
+      #  - name: ONPREM_SUFFIX
+      #    value: ${ONPREM_SUFFIX}
         - name: AWS_SUFFIX
           value: ${AWS_SUFFIX}
         - name: GCP_SUFFIX
@@ -67,7 +67,7 @@ kind: Route
 metadata:
   name: amqps
 spec:
-  host: amqps-demo2-amq.apps.${ONPREM_SUFFIX}
+  host: amqps-demo2-amq.apps.${GCP_SUFFIX}
   port:
     targetPort: amqps
   tls:
@@ -83,7 +83,7 @@ kind: Route
 metadata:
   name: console
 spec:
-  host: console-demo2-amq.apps.${ONPREM_SUFFIX}
+  host: console-demo2-amq.apps.${GCP_SUFFIX}
   port:
     targetPort: console
   to:
